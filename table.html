@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Manage Your Custom Table</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    <main>
+        <section id="add-item" class="form-container">
+            <h3>Add Item</h3>
+            <input type="text" id="name" placeholder="Enter Name">
+            <input type="text" id="category" placeholder="Enter Category">
+            <input type="number" id="year" placeholder="Enter Year">
+            <button onclick="addItem()">Add Item</button>
+        </section>
+        <section id="search-item" class="search-container">
+            <h3>Search for Item...</h3>
+            <input type="text" id="search" placeholder="Search for names..." onkeyup="filterTable()">
+        </section>
+        <section id="table-section">
+            <table id="customTable">
+                <thead>
+                    <tr>
+                        <th onclick="sortTable(0)">S.no</th>
+                        <th onclick="sortTable(1)">Name</th>
+                        <th onclick="sortTable(2)">Category</th>
+                        <th onclick="sortTable(3)">Year</th>
+                        <th>Edit Entry</th>
+                        <th>Delete Entry</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
